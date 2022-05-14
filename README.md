@@ -1,6 +1,6 @@
 # Shopify Data Science Technical Challenge Fall 2022
 
-###[Follow This Link To Technical Challenge Response](https://lmjacoby.github.io/ShopifyF22_TechChallenge/)
+### [Follow This Link To Technical Challenge Response](https://lmjacoby.github.io/ShopifyF22_TechChallenge/)
 Thank you for coming to check out my Shopify Fall 2022 Technical Challenge response. Please follow the link above to view my responses to both questions 1 and 2.
 
 ### Repository Structure
@@ -17,5 +17,5 @@ ShopifyF22_TechChallenge
 ```
 
 <p align="center">
-  <img "src=./shoes.jpg" />
+  <img src="https://github.com/lmjacoby/ShopifyF22_TechChallenge/blob/main/shoes.jpg" />
 </p>
