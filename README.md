@@ -1,8 +1,7 @@
 # Shopify Data Science Technical Challenge Fall 2022
 
-### Introduction
-Thank you for coming to look at my Technical Challenge for Shopify's Fall 2022 Internship.
-**Please [follow this link](https://lmjacoby.github.io/ShopifyF22_TechChallenge/) to view my technical challenge answers.** Both Questions 1 and 2 are on the same page.
+###[Follow This Link To Technical Challenge Response](https://lmjacoby.github.io/ShopifyF22_TechChallenge/)
+Thank you for coming to check out my Shopify Fall 2022 Technical Challenge response. Please follow the link above to view my responses to both questions 1 and 2.
 
 ### Repository Structure
 ```
@@ -16,3 +15,7 @@ ShopifyF22_TechChallenge
 |____ notebook  
        |   ShopifyF22_TechChallenge.ipynb  
 ```
+
+<p align="center">
+  <img "./src=shoes.jpg" />
+</p>
