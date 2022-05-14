@@ -17,5 +17,5 @@ ShopifyF22_TechChallenge
 ```
 
 <p align="center">
-  <img "./src=shoes.jpg" />
+  <img "src=./shoes.jpg" />
 </p>
