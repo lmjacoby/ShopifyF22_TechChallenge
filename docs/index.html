@@ -9129,15 +9129,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -12519,7 +12519,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -13033,14 +13033,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -14566,9 +14566,9 @@ Name: price_per_item, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="How-many-orders-were-shipped-by-Speedy-Express-in-total?">How many orders were shipped by Speedy Express in total?<a class="anchor-link" href="#How-many-orders-were-shipped-by-Speedy-Express-in-total?">&#182;</a></h3><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">O</span><span class="p">.</span><span class="n">OrderID</span><span class="p">)</span> <span class="k">AS</span> <span class="n">NumOrders</span>   
-<span class="k">FROM</span> <span class="n">Orders</span> <span class="k">AS</span> <span class="n">O</span> <span class="k">JOIN</span> <span class="n">Shippers</span> <span class="k">AS</span> <span class="n">S</span>  
-<span class="k">ON</span> <span class="n">O</span><span class="p">.</span><span class="n">ShipperID</span><span class="o">=</span><span class="n">S</span><span class="p">.</span><span class="n">ShipperID</span>  
+<h3 id="How-many-orders-were-shipped-by-Speedy-Express-in-total?">How many orders were shipped by Speedy Express in total?<a class="anchor-link" href="#How-many-orders-were-shipped-by-Speedy-Express-in-total?">&#182;</a></h3><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">O</span><span class="p">.</span><span class="n">OrderID</span><span class="p">)</span> <span class="k">AS</span> <span class="n">NumOrders</span>
+<span class="k">FROM</span> <span class="n">Orders</span> <span class="k">AS</span> <span class="n">O</span> <span class="k">JOIN</span> <span class="n">Shippers</span> <span class="k">AS</span> <span class="n">S</span>
+<span class="k">ON</span> <span class="n">O</span><span class="p">.</span><span class="n">ShipperID</span><span class="o">=</span><span class="n">S</span><span class="p">.</span><span class="n">ShipperID</span>
 <span class="k">WHERE</span> <span class="n">S</span><span class="p">.</span><span class="n">ShipperName</span><span class="o">=</span><span class="s1">&#39;Speedy Express&#39;</span><span class="p">;</span>
 </pre></div>
 <p><strong>value: 54</strong></p>
@@ -14579,11 +14579,11 @@ Name: price_per_item, dtype: float64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="What-is-the-last-name-of-the-employee-with-the-most-orders?">What is the last name of the employee with the most orders?<a class="anchor-link" href="#What-is-the-last-name-of-the-employee-with-the-most-orders?">&#182;</a></h3><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">E</span><span class="p">.</span><span class="n">LastName</span><span class="p">,</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">O</span><span class="p">.</span><span class="n">EmployeeID</span><span class="p">)</span> <span class="k">AS</span> <span class="n">NumOrders</span>  
-<span class="k">FROM</span> <span class="n">Employees</span> <span class="k">AS</span> <span class="n">E</span> <span class="k">JOIN</span> <span class="n">Orders</span> <span class="k">AS</span> <span class="n">O</span>  
-<span class="k">ON</span> <span class="n">E</span><span class="p">.</span><span class="n">EmployeeID</span><span class="o">=</span><span class="n">O</span><span class="p">.</span><span class="n">EmployeeID</span>  
-<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">E</span><span class="p">.</span><span class="n">LastName</span>  
-<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">NumOrders</span> <span class="k">DESC</span>  
+<h3 id="What-is-the-last-name-of-the-employee-with-the-most-orders?">What is the last name of the employee with the most orders?<a class="anchor-link" href="#What-is-the-last-name-of-the-employee-with-the-most-orders?">&#182;</a></h3><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">E</span><span class="p">.</span><span class="n">LastName</span><span class="p">,</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">O</span><span class="p">.</span><span class="n">EmployeeID</span><span class="p">)</span> <span class="k">AS</span> <span class="n">NumOrders</span>
+<span class="k">FROM</span> <span class="n">Employees</span> <span class="k">AS</span> <span class="n">E</span> <span class="k">JOIN</span> <span class="n">Orders</span> <span class="k">AS</span> <span class="n">O</span>
+<span class="k">ON</span> <span class="n">E</span><span class="p">.</span><span class="n">EmployeeID</span><span class="o">=</span><span class="n">O</span><span class="p">.</span><span class="n">EmployeeID</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">E</span><span class="p">.</span><span class="n">LastName</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">NumOrders</span> <span class="k">DESC</span>
 <span class="k">LIMIT</span> <span class="mi">1</span><span class="p">;</span>
 </pre></div>
 <p><strong>value: Peacock, 40</strong></p>
@@ -14595,14 +14595,14 @@ Name: price_per_item, dtype: float64</pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="What-product-was-ordered-the-most-by-customers-in-Germany?">What product was ordered the most by customers in Germany?<a class="anchor-link" href="#What-product-was-ordered-the-most-by-customers-in-Germany?">&#182;</a></h3><p>(I am interpreting this question to mean orders placed of a product, not total quantity of a product)</p>
-<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">P</span><span class="p">.</span><span class="n">ProductName</span><span class="p">,</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">OD</span><span class="p">.</span><span class="n">ProductID</span><span class="p">)</span> <span class="k">AS</span> <span class="n">NumOrders</span>  
-<span class="k">FROM</span> <span class="n">Products</span> <span class="k">AS</span> <span class="n">P</span> <span class="k">JOIN</span> <span class="n">OrderDetails</span> <span class="k">AS</span> <span class="n">OD</span>  
-<span class="k">ON</span> <span class="n">P</span><span class="p">.</span><span class="n">ProductID</span><span class="o">=</span><span class="n">OD</span><span class="p">.</span><span class="n">ProductID</span>  
-<span class="k">JOIN</span> <span class="n">Orders</span> <span class="k">AS</span> <span class="n">O</span> <span class="k">ON</span> <span class="n">O</span><span class="p">.</span><span class="n">OrderID</span><span class="o">=</span><span class="n">OD</span><span class="p">.</span><span class="n">OrderID</span>  
-<span class="k">JOIN</span> <span class="n">Customers</span> <span class="k">AS</span> <span class="n">C</span> <span class="k">ON</span> <span class="n">C</span><span class="p">.</span><span class="n">CustomerID</span><span class="o">=</span><span class="n">O</span><span class="p">.</span><span class="n">CustomerID</span>  
-<span class="k">WHERE</span> <span class="n">C</span><span class="p">.</span><span class="n">Country</span> <span class="o">=</span> <span class="s1">&#39;Germany&#39;</span>  
-<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">P</span><span class="p">.</span><span class="n">ProductName</span>  
-<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">NumOrders</span> <span class="k">DESC</span>  
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">P</span><span class="p">.</span><span class="n">ProductName</span><span class="p">,</span> <span class="nf">COUNT</span><span class="p">(</span><span class="n">OD</span><span class="p">.</span><span class="n">ProductID</span><span class="p">)</span> <span class="k">AS</span> <span class="n">NumOrders</span>
+<span class="k">FROM</span> <span class="n">Products</span> <span class="k">AS</span> <span class="n">P</span> <span class="k">JOIN</span> <span class="n">OrderDetails</span> <span class="k">AS</span> <span class="n">OD</span>
+<span class="k">ON</span> <span class="n">P</span><span class="p">.</span><span class="n">ProductID</span><span class="o">=</span><span class="n">OD</span><span class="p">.</span><span class="n">ProductID</span>
+<span class="k">JOIN</span> <span class="n">Orders</span> <span class="k">AS</span> <span class="n">O</span> <span class="k">ON</span> <span class="n">O</span><span class="p">.</span><span class="n">OrderID</span><span class="o">=</span><span class="n">OD</span><span class="p">.</span><span class="n">OrderID</span>
+<span class="k">JOIN</span> <span class="n">Customers</span> <span class="k">AS</span> <span class="n">C</span> <span class="k">ON</span> <span class="n">C</span><span class="p">.</span><span class="n">CustomerID</span><span class="o">=</span><span class="n">O</span><span class="p">.</span><span class="n">CustomerID</span>
+<span class="k">WHERE</span> <span class="n">C</span><span class="p">.</span><span class="n">Country</span> <span class="o">=</span> <span class="s1">&#39;Germany&#39;</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">P</span><span class="p">.</span><span class="n">ProductName</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">NumOrders</span> <span class="k">DESC</span>
 <span class="k">LIMIT</span> <span class="mi">1</span><span class="p">;</span>
 </pre></div>
 <p><strong>value: Gorgonzola Telino, 5</strong></p>
@@ -14614,7 +14614,7 @@ Name: price_per_item, dtype: float64</pre>
   </div>
 </body>
 
- 
+
 
 
 </html>
